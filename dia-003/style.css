@@ -1,0 +1,55 @@
+body {
+    background-color: rgb(41, 39, 39);
+    overflow: hidden;
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+}
+
+.wrapper {
+    height: 100vh;
+    width: 50vw;
+    margin: 0;
+    background-color: #000;
+    overflow: hidden;
+    position: absolute;
+    color: red;
+    top: 0;
+    left: 0;
+    border-right: 2px solid red;
+}
+
+.overflow {
+    color: white;
+}
+
+.animation {
+    position: absolute;
+    top: 50%;
+    white-space: nowrap;
+    font-size: 12rem;
+    line-height: 220px;
+    overflow: hidden;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    animation: animation-slide 10s linear infinite;
+}
+
+
+
+@keyframes animation-slide {
+    0%
+    {
+        transform: translate(30%, -50%);
+    }
+    100%
+    {
+        transform: translate(-80%, -50%);
+    }
+}
