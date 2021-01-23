@@ -49,13 +49,13 @@ body {
   content: "";
   position: absolute;
   width: 25px;
-  height: 5px;
+  height: 8px;
   top: 35%;
   right: 5%;
   z-index: 2;
   transform: skewX(-50deg);
   background-color: rgb(41, 39, 39);
-  margin: 26px 0px 0 0px; 
+  margin: 27px 0px 0 0px; 
   transition: .5s linear;
 }
 
