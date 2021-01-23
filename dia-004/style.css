@@ -28,6 +28,7 @@ body {
   letter-spacing: .3rem;
   text-transform: uppercase;
   box-sizing: border-box;
+  cursor: pointer;
 }
 .animation {
   background-color: rgb(41, 39, 39);
@@ -56,11 +57,8 @@ body {
   background-color: rgb(41, 39, 39);
   margin: 26px 0px 0 0px; 
   transition: .5s linear;
+}
 
-}
-.animation:hover {
-  cursor: pointer;
-}
 .animation:hover::after {
   right: 85%;
 }
