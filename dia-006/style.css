@@ -15,10 +15,11 @@ body {
 }
 
 .animation {
-    font-size: 7rem;
-    letter-spacing: 1rem;
+    font-size: 10rem;
+    font-family: monospace;
+    letter-spacing: 1.3rem;
     color: rgba(88, 85, 85, 0.4);
-    animation: animation 2s linear infinite
+    animation: animation 4s ease-in-out infinite
 }
 .animation:first-child {
    animation-delay: 0s;
@@ -36,19 +37,19 @@ body {
     animation-delay: 0.4s;
 }
 .animation:nth-child(6){
-    animation-delay: 0.5s;
+    animation-delay: .5s;
 }
 .animation:nth-child(7){
-    animation-delay: 0.6s
+    animation-delay:.6s;
 }
 .animation:nth-child(8){
-    animation-delay: 0.7s;
+    animation-delay: .7s;
 }
 .animation:nth-child(9){
-    animation-delay: 0.8s;
+    animation-delay:.8s;
 }
 .animation:nth-child(10){
-    animation-delay: 0.9s;
+    animation-delay: .9s;
 }
 .animation:nth-child(11){
     animation-delay: 1s;
@@ -56,13 +57,23 @@ body {
 
 
 @keyframes animation {
+    0% {
+        color: rgba(88, 85, 85, 0.4);
+        text-shadow: 0px 0px 0px black;
+    } 40% {
+        color: #1ECBE6;
+        text-shadow:  0 0 0.7em rgb(0, 255, 255) , 0 0 0.2em rgb(0, 255, 255);;
+    } 100% {
+        color: rgba(88, 85, 85, 0.6);
+        text-shadow: 0px 0px 1px black;
+    }
+}
+@keyframes animate {
     to {
         color: rgba(88, 85, 85, 0.4);
         text-shadow: 0px 0px 0px black;
-    } from {
+    }from {
         color: #1ECBE6;
-        /* text-shadow: 5px 5px 20px rgb(0, 255, 255); */
-        text-shadow: 1px 1px 2px black, 0 0 0.7em rgb(0, 255, 255) , 0 0 0.2em rgb(0, 255, 255);;
-        /**/
+        text-shadow:  0 0 0.7em rgb(0, 255, 255) , 0 0 0.2em rgb(0, 255, 255);;
     }
 }
