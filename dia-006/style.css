@@ -1,0 +1,68 @@
+body {
+    background-color: rgb(41, 39, 39);
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100vh;
+    width: 100vw;
+}
+
+.animation {
+    font-size: 7rem;
+    letter-spacing: 1rem;
+    color: rgba(88, 85, 85, 0.4);
+    animation: animation 2s linear infinite
+}
+.animation:first-child {
+   animation-delay: 0s;
+}
+.animation:nth-child(2){
+    animation-delay: 0.1s;
+}
+.animation:nth-child(3){
+    animation-delay: 0.2s;
+}
+.animation:nth-child(4){
+    animation-delay: 0.3s;
+}
+.animation:nth-child(5){
+    animation-delay: 0.4s;
+}
+.animation:nth-child(6){
+    animation-delay: 0.5s;
+}
+.animation:nth-child(7){
+    animation-delay: 0.6s
+}
+.animation:nth-child(8){
+    animation-delay: 0.7s;
+}
+.animation:nth-child(9){
+    animation-delay: 0.8s;
+}
+.animation:nth-child(10){
+    animation-delay: 0.9s;
+}
+.animation:nth-child(11){
+    animation-delay: 1s;
+}
+
+
+@keyframes animation {
+    to {
+        color: rgba(88, 85, 85, 0.4);
+        text-shadow: 0px 0px 0px black;
+    } from {
+        color: #1ECBE6;
+        /* text-shadow: 5px 5px 20px rgb(0, 255, 255); */
+        text-shadow: 1px 1px 2px black, 0 0 0.7em rgb(0, 255, 255) , 0 0 0.2em rgb(0, 255, 255);;
+        /**/
+    }
+}
