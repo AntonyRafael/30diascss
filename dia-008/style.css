@@ -1,72 +1,76 @@
 body {
-    background-color: rgb(41, 39, 39);
-    overflow: hidden;
-    margin: 0;
-    padding: 0;
+  background-color: rgb(41, 39, 39);
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
 }
 
-
 .container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100vw;
-    height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
 }
 
 .teste {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 200px;
-    height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 200px;
 }
 
 .coracao {
-    position: relative;
-    top: 0;
-    left: 0;
-    width: 50%;
-    height: 50%;
-    background-color: #DD0000;
-    transform:  rotate(45deg);
-    animation: animation 3s linear infinite;
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 50%;
+  background-color: #dd0000;
+  transform: rotate(45deg);
+  animation: animation 3s linear infinite;
 }
 .coracao::before {
-    content: "";
-    position: absolute;
-    background-color:#DD0000;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    transform: translateY(-50%);
+  content: "";
+  position: absolute;
+  background-color: #dd0000;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  transform: translateY(-50%);
 }
 .coracao::after {
-    content: "";
-    position: absolute;
-    background-color:#DD0000;
-    top: 0;
-    left: 0;
-    transform: translate(-50%);
-    border-radius: 50%;
-    width: 100%;
-    height: 100%;
+  content: "";
+  position: absolute;
+  background-color: #dd0000;
+  top: 0;
+  left: 0;
+  transform: translate(-50%);
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
 }
 
 @keyframes animation {
-    0% {
-     transform: rotate(45deg) scale(1);
-    } 20% {
-     transform: rotate(45deg) scale(1.5);
-    } 40% {
-     transform: rotate(45deg) scale(1.2);
-    } 60%{
-     transform: rotate(45deg) scale(1.5);
-    } 80% {
-     transform: rotate(45deg) scale(1.2); 
-    } 100% {
-        transform: rotate(45deg) scale(1);
-    }
+  0% {
+    transform: rotate(45deg) scale(1);
+  }
+  20% {
+    transform: rotate(45deg) scale(1.5);
+  }
+  40% {
+    transform: rotate(45deg) scale(1.2);
+  }
+  60% {
+    transform: rotate(45deg) scale(1.5);
+  }
+  80% {
+    transform: rotate(45deg) scale(1.2);
+  }
+  100% {
+    transform: rotate(45deg) scale(1);
+  }
 }
