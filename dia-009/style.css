@@ -1,0 +1,91 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #1b262c;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+.pendulo {
+  display: flex;
+  width: 350px;
+  border-top: 8px solid #1f555c;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.pendulo li {
+  list-style: none;
+  display: block;
+  position: relative;
+  width: 4px;
+  height: 280px;
+  background-color: #1f555c;
+  margin-right: 58px;
+  transform-origin: 0 -2px; /* Ponto de onde a animação (transformação) vai começar*/
+}
+.pendulo li::before {
+  content: "";
+  position: absolute;
+  top: 80%;
+  margin-left: -32px;
+  width: 66px;
+  height: 66px;
+  border-radius: 50%;
+  background-color: #1f555c;
+}
+
+.pendulo li:first-child {
+  animation: pendulo-rigth 3s linear infinite;
+  animation-delay: 2.5s;
+}
+
+.pendulo li:last-child {
+  animation: pendulo-left 3s linear infinite;
+  animation-delay: 1s;
+}
+
+@keyframes pendulo-left {
+  /* 0% {
+        transform: rotate3d(0, 0, 0, 0)
+    } 50% {
+        transform: rotate3d(0, 0, 5.0, -80deg)
+    } 100% {
+    transform: rotate3d(0, 0, 0, 0)
+    } */
+  0% {
+    transform: rotate(0);
+  }
+  50% {
+    transform: rotate(-70deg);
+  }
+  75% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
+
+@keyframes pendulo-rigth {
+  0% {
+    transform: rotate(0);
+  }
+  50% {
+    transform: rotate(70deg);
+  }
+  75% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
