@@ -3,6 +3,7 @@ body {
   padding: 0;
   box-sizing: border-box;
   background-color: #1b262c;
+  overflow: hidden;
 }
 
 .container {
@@ -36,7 +37,7 @@ body {
   content: "";
   position: absolute;
   top: 80%;
-  margin-left: -32px;
+  transform: translateX(-50%);
   width: 66px;
   height: 66px;
   border-radius: 50%;
@@ -44,13 +45,13 @@ body {
 }
 
 .pendulo li:first-child {
+  margin-top: -5px;
   animation: pendulo-rigth 3s linear infinite;
-  animation-delay: 2.5s;
+  animation-delay: 1.5s;
 }
 
 .pendulo li:last-child {
   animation: pendulo-left 3s linear infinite;
-  animation-delay: 1s;
 }
 
 @keyframes pendulo-left {
@@ -64,10 +65,10 @@ body {
   0% {
     transform: rotate(0);
   }
-  50% {
-    transform: rotate(-70deg);
+  25% {
+    transform: rotate(-59deg);
   }
-  75% {
+  50% {
     transform: rotate(0);
   }
   100% {
@@ -79,10 +80,10 @@ body {
   0% {
     transform: rotate(0);
   }
-  50% {
-    transform: rotate(70deg);
+  25% {
+    transform: rotate(59deg);
   }
-  75% {
+  50% {
     transform: rotate(0);
   }
   100% {
