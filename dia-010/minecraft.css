@@ -1,0 +1,94 @@
+@font-face {
+  font-family: minecraft-font;
+  src: url(fonts/Minecrafter.Alt.ttf);
+}
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #1d3c09;
+  overflow: hidden;
+}
+/* Desafio */ 
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+.frase {
+  display: flex;
+  font-family: minecraft-font;
+  font-size: 8rem;
+  color: #71a95a;
+  letter-spacing: 1rem;
+  text-transform: uppercase;
+}
+.frase::after {
+  content: "";
+  align-items: center;
+  justify-content: center;
+  font-size: 6rem;
+  opacity: .8;
+  animation: anima 3s linear infinite;
+}
+/* Bg imagens */ 
+.image {
+  width: 5rem;
+  opacity: .7;
+}
+.top-rg-img {
+  position: absolute;
+  top: -2%;
+  left: -1%;
+  transform: rotate(160deg);
+}
+.top-lf-img {
+  position: absolute;
+  bottom: -2%;
+  left: -1%;
+  transform: rotate(30deg);
+}
+.bottom-rg-img {
+  position: absolute;
+  top: -2%;
+  right: -1%;
+  transform: rotate(-160deg);
+}
+.bottom-lf-img {
+  position: absolute;
+  bottom: -2%;
+  right: -1%;
+  transform: rotate(-30deg);
+}
+.top-ct-img {
+  position: absolute;
+  top: -2%;
+  right: 50%;
+  transform: rotate(180deg);
+}
+.bottom-ct-img {
+  position: absolute;
+  bottom: -2%;
+  right: 50%;
+  transform: rotate(1800deg);
+}
+@keyframes anima {
+  0% {
+    content: "🎮";
+  }
+  25% {
+    content: "❤️";
+  }
+  50% {
+    content: "🎧";
+  }
+  75% {
+    content: "🛶";
+  }
+  100% {
+    content: "🍪";
+  }
+}

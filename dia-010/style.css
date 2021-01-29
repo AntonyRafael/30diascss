@@ -1,0 +1,52 @@
+@font-face {
+  font-family: lol-font;
+  src: url(fonts/FrizQuadrataRegular.ttf);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #1b262c;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+.frase {
+  display: flex;
+  font-family: lol-font;
+  font-size: 10rem;
+  color: #fff;
+  letter-spacing: 1rem;
+  text-transform: uppercase;
+}
+.frase::after {
+  content: "";
+  font-size: 8rem;
+  opacity: .8;
+  animation: anima 3s linear infinite;
+}
+
+@keyframes anima {
+  0% {
+    content: "🎮";
+  }
+  25% {
+    content: "💻";
+  }
+  50% {
+    content: "🎧";
+  }
+  75% {
+    content: "🖱️";
+  }
+  100% {
+    content: "📱";
+  }
+}
