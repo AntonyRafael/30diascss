@@ -1,0 +1,43 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #1c2327;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+}
+.preenchimento {
+  position: relative;
+  font-size: 9rem;
+  letter-spacing: .5rem;
+  text-transform: uppercase;
+  color: rgb(38, 100, 148);
+  opacity: .7;
+  z-index: 1;
+}
+
+.preenchimento::before {
+  content: "#30diasdeCss";
+  font-size: 9rem;
+  position: absolute;
+  overflow: hidden;
+  width: 0%;
+  height: 100%;
+  left: 0%;
+  opacity: 1;
+  z-index: -1;
+  color:  rgb(4, 242, 250);
+  transition: all .8s linear;
+}
+
+.preenchimento:hover::before{
+  width: 100%;
+    z-index: 1;  
+}
