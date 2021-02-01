@@ -1,0 +1,65 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #1c2327;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+.loader span {
+  white-space: nowrap;
+  font-size: 8rem;
+  color: white;
+  font-weight: 550;
+  line-height: 10rem;
+  color: rgb(26, 245, 205);
+  animation: loading 2.8s ease-in-out infinite backwards;
+}
+
+.loader span:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.loader span:nth-child(3) {
+  animation-delay: 0.4s;
+}
+.loader span:nth-child(4) {
+  animation-delay: 0.6s;
+}
+.loader span:nth-child(5) {
+  animation-delay: 0.8s;
+}
+.loader span:nth-child(6) {
+  animation-delay: 1s;
+}
+.loader span:nth-child(7) {
+  animation-delay: 1.2s;
+}
+
+@keyframes loading {
+  0% {
+    color: rgb(0, 123, 255);
+    letter-spacing: 20px;
+    text-shadow: 4px 4px 20px  rgb(0, 123, 255);
+  }
+  50% {
+    opacity: 1;
+    color: rgb(26, 245, 205);
+    text-shadow: 4px 4px 20px  rgb(26, 245, 205);
+  }
+  80% {
+    letter-spacing: -10px;
+  }
+  100% {
+    color: rgb(0, 123, 255);
+    text-shadow: 4px 4px 20px  rgb(0, 123, 255);
+    letter-spacing: 20px;
+    opacity: 1;
+  }
+}
