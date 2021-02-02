@@ -1,0 +1,31 @@
+@font-face {
+  font-family: hackerMesmo;
+  src: url(fonts/Hacked-KerX.ttf);
+}
+body {
+  background-color: rgb(216, 216, 216);
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  font-family: hackerMesmo;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+.background {
+  font-size: 9rem;
+  color: white;
+  background-image: url(./imagens/binary.gif);
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: -.5rem;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
