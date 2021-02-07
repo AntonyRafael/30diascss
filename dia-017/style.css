@@ -1,0 +1,55 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #1c2327;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+.square {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  background-color: rgb(20, 81, 116);
+  border-radius: 8px;
+  animation: loading 3s linear infinite;
+}
+
+@keyframes loading {
+  12% {
+    transform: rotate3d(1, 0, 0, 90deg);
+  }
+  24% {
+    transform: rotate3d(0, 0, 0, 0);
+  }
+  36% {
+    transform: rotate3d(0, 1, 0, 90deg);
+  }
+  48% {
+    transform: rotate3d(0, 0, 0, 0);
+  }
+  60% {
+    transform: rotate3d(1, 0, 0, -90deg);
+  }
+  72% {
+    transform: rotate3d(0, 0, 0, 0);
+  }
+  84% {
+    transform: rotate3d(0, 1, 0, -90deg);
+  }
+  100% {
+    transform: rotate3d(0, 0, 0, 0);
+  }
+}
+
+/* para cima : transform: rotate3d(1, 0, 0, 180deg);
+   lado esquerdo: rotate3d(0, 1, 0, 180deg)
+   para baixo: transform: rotate3d(1, 0, 0, -180deg)
+   lado direito: rotate3d(0, 1, 0, -180deg)
+*/
