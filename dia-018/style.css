@@ -24,11 +24,11 @@ body {
   color: #fff;
   font-size: 8rem;
   letter-spacing: 1rem;
-  transition: 2s;
+  transition: 3s;
 }
 
 .animation:hover li {
-  transform: rotate(45deg) translateY(-150%) translateX(-20%);
+  transform: rotate(45deg) translateY(-120%) translateX(-20%);
 	opacity: 0;
 	filter: blur(30px);
 }
