@@ -21,7 +21,7 @@ body {
 
 .animation li {
   list-style: none;
-  color: #fff;
+  color: rgb(125, 209, 211);
   font-size: 8rem;
   letter-spacing: 1rem;
   transition: 3s;
