@@ -1,0 +1,62 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #1c2327;
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+}
+
+.animation {
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.animation li {
+  list-style: none;
+  color: #fff;
+  font-size: 8rem;
+  letter-spacing: 1rem;
+  transition: 2s;
+}
+
+.animation:hover li {
+  transform: rotate(45deg) translateY(-150%) translateX(-20%);
+	opacity: 0;
+	filter: blur(30px);
+}
+
+
+.animation li:first-child {
+  transition-delay: 0s;
+}
+
+.animation li:nth-child(2) {
+  transition-delay: 0.4s;
+}
+.animation li:nth-child(3) {
+  transition-delay: 0.8s;
+}
+
+.animation li:nth-child(4) {
+  transition-delay: 1.2s;
+}
+
+.animation li:nth-child(5) {
+  transition-delay: 1.4s;
+}
+
+.animation li:nth-child(6) {
+  transition-delay: 1.6s;
+}
+
+.animation li:nth-child(7) {
+  transition-delay: 1.8s;
+}
