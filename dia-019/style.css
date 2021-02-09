@@ -1,0 +1,131 @@
+:root {
+  --ball-red: #ff4242;
+  --ball-green: #41fa41;
+  --ball-blue: #4242fa;
+  --ball-pink: #fc4a68;
+  --ball-yellow: #f7f753;
+  --ball-purple: rgb(240, 57, 240);
+  --box-shadow: 0 0 0.4em, 0 0 0.6em, 0 0 0.8em;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 100vh;
+    background: #000;
+    overflow: hidden;
+}
+
+.ball {
+    position: relative;
+    min-width: 750px;
+    height: 100vh;
+    margin: -150px;
+    transform-origin: right;
+}
+
+.brilho:nth-child(even)
+{
+    transform-origin: left;
+}
+.ball span {
+    position: absolute;
+    top: calc(80px * var(--i));
+    left: calc(80px * var(--i));
+    bottom: calc(80px * var(--i));
+    right: calc(80px * var(--i));
+}
+
+/* .position-left span {
+    position: relative ;
+    top: calc(80px * var(--i));
+    bottom: calc(80px * var(--i));
+    right: calc(80px * var(--i));
+} */
+
+.ball span:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -8px;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+}
+
+.ball span:nth-child(3n+1)
+{
+    animation: move-ball 11s alternate-reverse infinite;
+}
+.ball span:nth-child(3n+2)
+{
+    animation: move-ball-reverse 3s alternate-reverse infinite ease-in-out;
+}
+.ball span:nth-child(3n+3)
+{
+    animation: move-ball 7s alternate-reverse infinite;
+}
+
+
+
+@keyframes move-ball {
+  to {
+    filter: hue-rotate(0);
+    transform: rotate(0) translateX(0);
+  }
+  from {
+    filter: hue-rotate(360deg);
+    transform: rotate(380deg) translateX(50%);
+  }
+}
+
+@keyframes move-ball-reverse {
+    to {
+      filter: hue-rotate(360deg);
+      transform: rotate(360deg)  translateX(0);
+    }
+    from {
+      filter: hue-rotate(0deg);
+      transform: rotate(0deg)  translateX(-50%);
+    }
+  }
+
+
+.ball span.green::before {
+  background-color: var(--ball-green);
+  box-shadow: var(--box-shadow) var(--ball-green),
+    var(--box-shadow) var(--ball-green), var(--box-shadow) var(--ball-green);
+}
+.ball span.red::before {
+  background-color: var(--ball-red);
+  box-shadow: var(--box-shadow) var(--ball-red),
+    var(--box-shadow) var(--ball-red), var(--box-shadow) var(--ball-red);
+}
+.ball span.blue::before {
+  background-color: var(--ball-blue);
+  box-shadow: var(--box-shadow) var(--ball-blue),
+    var(--box-shadow) var(--ball-blue), var(--box-shadow) var(--ball-blue);
+}
+.ball span.yellow::before {
+  background-color: var(--ball-yellow);
+  box-shadow: var(--box-shadow) var(--ball-yellow),
+    var(--box-shadow) var(--ball-yellow), var(--box-shadow) var(--ball-yellow);
+}
+.ball span.pink::before {
+  background-color: var(--ball-pink);
+  box-shadow: var(--box-shadow) var(--ball-pink),
+    var(--box-shadow) var(--ball-pink), var(--box-shadow) var(--ball-pink);
+}
+.ball span.purple::before {
+  background-color: var(--ball-purple);
+  box-shadow: var(--box-shadow) var(--ball-purple),
+    var(--box-shadow) var(--ball-purple), var(--box-shadow) var(--ball-purple);
+}
