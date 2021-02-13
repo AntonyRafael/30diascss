@@ -1,0 +1,44 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #252525;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+.btn {
+  width: 300px;
+  padding: 20px 10px;
+  cursor: pointer;
+  background: none;
+  color: white;
+  border: 2px solid;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 2.125em;
+  transition: all .3s;
+}
+
+.btn:hover {
+    color: #4ab3d3;
+    animation: shake .3s 2 linear;
+}
+
+@keyframes shake {
+     25% {
+        transform: rotate(10deg);
+    } 50% {
+        transform: rotate(-10deg);
+    } 75% {
+        transform: rotate(10deg);
+    } 99% {
+        transform: rotate(-10deg);
+    }
+}
