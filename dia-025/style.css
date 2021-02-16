@@ -1,0 +1,63 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: #1d1d1d;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+ul {
+    position: relative;
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+ul li {
+    list-style: none;
+}
+
+.icon  {
+    font-size: 4em;
+    color: white;
+    opacity: .5;
+}
+
+.chk input[type="checkbox"] {
+    display: none;
+}
+.chk input:checked + div.icon {
+    color: rgb(209, 83, 83);
+    opacity: 1;
+    animation: mudaBg 10s linear infinite;
+}
+
+
+@keyframes mudaBg {
+    10% {
+        text-shadow: 0 0 2px currentColor,0 0 2px currentColor;
+        filter: hue-rotate(0);
+    } 30% {
+        text-shadow: 0 0 2px currentColor,0 0 2px currentColor;
+        filter: hue-rotate(180deg);
+    }60% {
+        text-shadow: 0 0 2px currentColor,0 0 2px currentColor;
+        filter: hue-rotate(360deg);
+
+    }90% {
+        text-shadow: 0 0 2px currentColor,0 0 2px currentColor;
+        filter: hue-rotate(180deg);
+
+    } 100% {
+        text-shadow: 0 0 2px currentColor,0 0 2px currentColor;
+        filter: hue-rotate(10deg);
+    }
+}
+
