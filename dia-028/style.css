@@ -1,0 +1,48 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background: #252525;
+  font-family:  Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.container {
+  animation: mudaBG 10s linear infinite;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.animation p {
+  position: relative;
+  text-align: center;
+  flex-wrap: wrap;
+  color: white;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin: 0;
+  font-size: 5em;
+}
+
+@keyframes mudaBG {
+  0% {
+    background: #252525;
+  }
+  20% {
+    background: #e62c2c;
+  }
+  40% {
+    background: #2828e0;
+  }
+  60% {
+    background: #1d971d;
+  }
+  80% {
+    background: #b8a124;
+  }
+  100% {
+    background: #252525;
+  }
+}
