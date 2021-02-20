@@ -1,0 +1,147 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background: #252525;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #213e71;
+  border-bottom: 3px solid #5873ac;
+}
+
+.logo img {
+  width: 150px;
+  max-width: 300px;
+  padding: 20px 40px;
+}
+
+.menu {
+}
+
+.menu ul {
+  position: relative;
+  list-style: none;
+  display: flex;
+}
+
+.menu ul li {
+  display: inline-block;
+}
+
+.menu ul li a {
+  text-decoration: none;
+  color: #ff0c49;
+  font-family: Arial, Helvetica, sans-serif;
+  transition: 0.5s;
+  font-weight: bold;
+  font-size: 1.225em;
+  line-height: 2em;
+  margin: 0 10px;
+}
+
+.menu ul li a:last-child {
+  margin-right: 20px;
+}
+.menu ul li a:hover {
+  color: #5873ac;
+}
+
+.menu-hamburguer {
+  display: none;
+  width: 30px;
+  height: 5px;
+  transition: .5s all;
+  border-radius: 10px;
+  background: #000;
+  cursor: pointer;
+}
+
+.menu-hamburguer::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 30px;
+  height: 5px;
+  top: 70%;
+  left: 0;
+  border-radius: 10px;
+  background: #000;
+}
+
+.menu-hamburguer::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 30px;
+  height: 5px;
+  top: 22%;
+  left: 0;
+  border-radius: 10px;
+  background: #000;
+}
+
+.chk {
+  display: flex;
+  align-items: center;
+  position: relative;
+  left: 85%;
+  width: 44px;
+  height: 44px;
+}
+.check {
+  display: none;
+}
+
+.check:checked + label > .menu-hamburguer {
+  transform: rotate(45deg);
+}
+.check:checked + label > .menu-hamburguer::after,.check:checked + label > .menu-hamburguer::before  {
+  transform: rotate(-90deg);
+  top: 0;
+  left: 0;
+}
+
+
+@media (max-width: 739px) {
+    .logo img {
+        padding: 20px 0 0 0;
+      }
+  .menu {
+    width: 100%;
+  }
+  .menu-hamburguer {
+    display: block;
+  }
+
+  .header {
+    flex-direction: column;
+    position: relative;
+    margin: 0;
+  }
+
+  .header .menu-itens {
+    display: none;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+  }
+  .menu-itens li {
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    border-bottom: 1px solid #5873ac;
+  }
+  .menu-itens li:last-child {
+    border: none;
+  }
+  .menu-itens li:first-child {
+    border-top: 1px solid #5873ac;
+  }
+  .check:checked + .chk + .menu-itens {
+    display: block;
+  }
+}
