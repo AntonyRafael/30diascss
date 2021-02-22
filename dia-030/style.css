@@ -1,0 +1,104 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: #252525;
+}
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+}
+.firework {
+    position: absolute;
+    border-radius: 50%;
+}
+
+.fogos {
+    position: absolute;
+    left: -2px;
+    width: 5px;
+    height: 90px;
+    transform-origin: 50% 100%;
+    overflow: hidden;
+}
+.fogos::before
+{
+    animation: explosion 1.5s infinite;
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 100%;
+    height: 40px;
+    background-color: rgb(235, 107, 107);
+
+}
+
+
+.fogos:nth-child(2) {
+    transform: rotate(30deg);
+}
+.fogos:nth-child(3) {
+    transform: rotate(60deg);
+}
+.fogos:nth-child(4) {
+    transform: rotate(90deg);
+}
+.fogos:nth-child(5) {
+    transform: rotate(120deg);
+}
+.fogos:nth-child(6) {
+    transform: rotate(150deg);
+}
+.fogos:nth-child(7) {
+    transform: rotate(180deg);
+}
+.fogos:nth-child(8) {
+    transform: rotate(210deg);
+}
+.fogos:nth-child(9) {
+    transform: rotate(240deg);
+}
+.fogos:nth-child(10) {
+    transform: rotate(270deg);
+}
+.fogos:nth-child(11) {
+    transform: rotate(300deg);
+}
+.fogos:nth-child(12) {
+    transform: rotate(330deg);
+}
+
+
+
+.firework:nth-child(2) {
+    top: 30%;
+    left: 40%;
+}
+
+.firework:nth-child(3) {
+    top: 30%;
+    left: 60%;
+}
+
+.firework:nth-child(2) .fogos::before {
+    animation-delay: .5s;
+    background: rgb(133, 235, 74);
+}
+.firework:nth-child(3) .fogos::before {
+    animation-delay: 1s;
+    background: rgb(74, 236, 236);
+
+}
+
+
+@keyframes explosion {
+    0% {
+        top:  100%;
+    } 100% {
+        top: -50%;
+    }
+}
